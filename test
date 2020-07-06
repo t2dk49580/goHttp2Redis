@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./goWebHandler -listen=:5000 -lua="`cat ./scripts/create.lua`" &
+./goWebHandler -listen=:5001 -lua="`cat ./scripts/reply.lua`" &

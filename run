@@ -1,0 +1,4 @@
+#!/bin/bash
+
+setsid ./goWebHandler -listen=:9999 -lua="`cat ./scripts/9999.lua`" &
+setsid ./goWebHandler -listen=:9998 -lua="`cat ./scripts/9998.lua`" &
