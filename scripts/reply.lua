@@ -45,4 +45,6 @@ end
 data.id = user
 redis.call('rpush',replyid..'-'..thesisid,cjson.encode(data))
 
-return '{"result":"reply ok"}'
+data.result = 'reply ok'
+
+return cjson.encode(data)
